@@ -18,11 +18,22 @@ public class Sandu57 extends Robot
 
 		
 		while(true) {
+			moveInSquare(200);
 			
-			ahead(100);
-			turnGunRight(360);
-			back(100);
-			turnGunRight(360);
+		}
+	}
+	
+	public void moveInSquare(int lengthOfSide){
+	int count = 0;
+		int i=0;
+		while(true) {
+			ahead(lengthOfSide);
+			turnRight(90);
+			i++;
+			if(i == 4){
+			count++;
+				out.println(count);
+			}
 		}
 	}
 
@@ -33,6 +44,8 @@ public class Sandu57 extends Robot
 		// Replace the next line with any behavior you would like
 		fire(1);
 	}
+	
+	
 
 	/**
 	 * onHitByBullet: What to do when you're hit by a bullet
